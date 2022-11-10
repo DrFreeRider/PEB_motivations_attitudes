@@ -5,7 +5,7 @@
 ******************************************************
 
 clear all
-cd "~/Documents/Research/PEB Drivers"
+cd "/Users/mrfreerider/Library/CloudStorage/OneDrive-WageningenUniversity&Research/Research/PEB Drivers"
 import excel "survey_data_adjusted.xlsx", sheet("resultados") firstrow
 describe 
 
@@ -255,6 +255,11 @@ label var status "Treatment status"
 label define status 1 "Control" 2 "Indirectly" 3 "Directly"
 label values status status
 
+*************************************************************
+* Save .dta
+*************************************************************
+
+save "~/Documents/GitHub/spreading_the_word/data_survey.dta", replace
 
 *************************************************************
 * Summary statistics 
